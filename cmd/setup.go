@@ -20,11 +20,7 @@ func runSetup() error {
 	fsUtil := internal.FsUtil{}
 	fmt.Println("Initializing guided setup")
 
-	configured, err := fsUtil.IsConfigured()
-
-	if err != nil {
-		return err
-	}
+	configured := fsUtil.IsConfigured()
 
 	if configured {
 		configDir, err := fsUtil.GetAppConfigDir()

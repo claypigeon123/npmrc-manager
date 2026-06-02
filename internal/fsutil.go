@@ -108,11 +108,11 @@ func (f *FsUtil) GetAppConfigDir() (string, error) {
 	return filepath.Join(home, NpmrcmDirName, ProfilesDirName), nil
 }
 
-func (f *FsUtil) IsConfigured() (bool, error) {
+func (f *FsUtil) IsConfigured() bool {
 	path, err := f.GetAppConfigDir()
 
 	if err != nil {
-		return false, err
+		return false
 	}
 
 	path = filepath.Join(path, NpmrcmConfigFilename)
@@ -120,10 +120,10 @@ func (f *FsUtil) IsConfigured() (bool, error) {
 	_, err = f.ReadFile(path)
 
 	if err != nil {
-		return false, err
+		return false
 	}
 
-	return true, nil
+	return true
 }
 
 func (f *FsUtil) ReadFile(path string) (string, error) {
