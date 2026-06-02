@@ -2,8 +2,9 @@ package cmd
 
 import (
 	"fmt"
-	"github.com/spf13/cobra"
 	"npmrcm/internal"
+
+	"github.com/spf13/cobra"
 )
 
 var activeCmd = &cobra.Command{
