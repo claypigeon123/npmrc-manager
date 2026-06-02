@@ -35,3 +35,5 @@ build/
 
 .effective-pom.xml
 .flattened-pom.xml
+
+*.exe

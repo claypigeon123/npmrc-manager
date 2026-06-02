@@ -1,4 +1,4 @@
-# CPS NPMRC Manager
+# Npmrc Manager
 Tool that makes it easy to track and switch between multiple .npmrc configurations - referred to as npmrc profiles.
 
 ## Usage
@@ -50,9 +50,4 @@ Some platforms have specific requirements to make the executables runnable.
 ## Build
 If you want to build the tool yourself for your own platform, you will need the following:
 
-- JDK 17 _(optional if using GraalVM integrated JDK)_
-- GraalVM - any recent release for Java 17 _(set the `GRAALVM_HOME` environment variable if you don't want to mess up your `JAVA_HOME` to use the integrated JDK of GraalVM)_
-- Maven 3.9.4 _(any recent version is fine)_
-- Various platform-specific development kits - GraalVM will report during build if anything additional is needed _(these can usually be installed simply with a package manager for your platform)_
-
-Once the required tools are in place, `cd` into the root directory of the project, and run `mvn -Pnative package`. During build, a `target` directory will be generated, containing the `npmrcm` executable for your platform.
+- Go SDK 1.26
